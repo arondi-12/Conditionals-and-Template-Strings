@@ -26,5 +26,23 @@ function checkJobEligibility(age, yearsExperience, knowsJavaScript) {
 }
 let firstname = "Davis";
 let secondname = "Martin";
-let welcome = "Hello" + "" + firstname + secondName + "Welcome to our website";
+let welcome =
+  "Hello" + "" + firstname + secondname + "" + "Welcome to our website";
 console.log(welcome);
+
+function productdetails(productName , price , availability){
+availability = isAvailable ? "available" : "not available";
+return `The ${productName} costs ${price}.It is ${availability}`;
+}
+function getproductinfo(productName,productId,isAvailable ){
+    return `Product:${productName},ID:${productId},Available:${isAvailable ? "Yes" : "NO"}`
+}
+console.log(getproductinfo("laptop", 506, true));
+console.log(getproductinfo("smartphone", 605 ,false));
+
+const readline = require('readline');
+const rl = readline.createInterface({
+    input : process.stdin,
+    output:process.stdout
+})
+
